@@ -13,8 +13,8 @@ public class ThreadsBuffered {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Starting ...");
 
-        final String origin = "C:/Users/BLS Consultores/IdeaProjects/BringGhostThat/src/main/java/com/inosuke/Files/File.bin";
-        final String destiny = "C:/Users/BLS Consultores/Downloads/Copia.bin";
+        final String origin = System.getProperty("user.home") + "/Downloads/Copia.bin";
+        final String destiny = System.getProperty("user.home") + "/Documents/FILEFILE.bin";
 
         Thread reader = new Thread(() -> readFile(origin));
         Thread writer = new Thread(() -> writeFile(destiny));
